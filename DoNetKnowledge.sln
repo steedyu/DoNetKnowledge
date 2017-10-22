@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoNetKnowledge", "DoNetKnowledge\DoNetKnowledge.csproj", "{AADBF47C-5291-48D5-A698-7D58E711282A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThread", "MultiThread\MultiThread.csproj", "{65CA3E9D-E39C-4F83-B488-3BF05B3984A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AADBF47C-5291-48D5-A698-7D58E711282A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AADBF47C-5291-48D5-A698-7D58E711282A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AADBF47C-5291-48D5-A698-7D58E711282A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AADBF47C-5291-48D5-A698-7D58E711282A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CA3E9D-E39C-4F83-B488-3BF05B3984A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65CA3E9D-E39C-4F83-B488-3BF05B3984A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65CA3E9D-E39C-4F83-B488-3BF05B3984A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65CA3E9D-E39C-4F83-B488-3BF05B3984A4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
