@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncAwaitDemo.cs" />
+    <Compile Include="EventHandleDemo.cs" />
     <Compile Include="MonitorDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

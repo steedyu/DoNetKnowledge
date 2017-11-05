@@ -13,7 +13,15 @@ namespace DoNetKnowledge
     {
         static void Main(string[] args)
         {
-            MultiThreadPart();
+            #region FinalCatch
+
+            Console.WriteLine(FinalCatchDemo.FinallyRetrunWithValueType());
+            var user = FinalCatchDemo.FinallyRetrunWithObjectType();
+
+            Console.ReadKey();
+            #endregion
+            
+            //MultiThreadPart();
 
         }
 
@@ -77,37 +85,48 @@ namespace DoNetKnowledge
 
             #region async await
 
-            //AsyncAwaitDemo asyncawaitdemo = new AsyncAwaitDemo();
+            AsyncAwaitDemo asyncawaitdemo = new AsyncAwaitDemo();
 
-            //// 同步方式
-            //Console.WriteLine("同步方式测试开始！");
-            //asyncawaitdemo.SyncMethod(0);
-            //Console.WriteLine("同步方式结束！");
-            //Console.ReadKey();
+            // 同步方式
+            Console.WriteLine("同步方式测试开始！");
+            asyncawaitdemo.SyncMethod(0);
+            Console.WriteLine("同步方式结束！");
+            Console.ReadKey();
 
-            //// 异步方式
-            //Console.WriteLine("\n异步方式测试开始！");
-            //asyncawaitdemo.AsyncMethod(0);
-            //Console.WriteLine("异步方式结束！");
-            //Console.ReadKey(); 
+            // 异步方式
+            Console.WriteLine("\n异步方式测试开始！");
+            asyncawaitdemo.AsyncMethod(0);
+            Console.WriteLine("异步方式结束！");
+            Console.ReadKey();
 
             #endregion
 
             #region task and await
-            Console.WriteLine("Thread {0},主线程", Thread.CurrentThread.ManagedThreadId);
-            AsyncAwaitDemo asyncawaitdemo = new AsyncAwaitDemo();
+            //Console.WriteLine("Thread {0},主线程", Thread.CurrentThread.ManagedThreadId);
+            //AsyncAwaitDemo asyncawaitdemo = new AsyncAwaitDemo();
 
-            //asyncawaitdemo.AwaitMethod();
+            ////asyncawaitdemo.AwaitMethod();
+            ////Console.ReadKey();
+
+            ////asyncawaitdemo.TaskMethod();
+            ////Console.ReadKey();
+
+            ////asyncawaitdemo.TaskMethod2();
+            ////Console.ReadKey();
+
+            //asyncawaitdemo.AwaitTaskMethod();
             //Console.ReadKey();
 
-            //asyncawaitdemo.TaskMethod();
-            //Console.ReadKey();
+            #endregion
 
-            //asyncawaitdemo.TaskMethod2();
-            //Console.ReadKey();
+            #region AutoResetEvent & ManualResetEvent
 
-            asyncawaitdemo.AwaitTaskMethod();
-            Console.ReadKey();
+            //EventHandleDemo eventhandledemo = new EventHandleDemo();
+            ////eventhandledemo.AutoResetEventMethod();
+
+            ////eventhandledemo.AutoRestEventMethod2();
+            //eventhandledemo.EventHandleMethod();
+
 
             #endregion
         }
@@ -138,6 +157,9 @@ namespace DoNetKnowledge
         //    Console.WriteLine("GetName Current Thread Id :{0}", Thread.CurrentThread.ManagedThreadId);
         //    Console.WriteLine("In antoher thread.....");
         //}
+
+
+
     }
 
 }
