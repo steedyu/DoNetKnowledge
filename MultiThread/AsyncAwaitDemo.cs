@@ -73,8 +73,6 @@ namespace MultiThread
             Console.WriteLine(str);
         }
 
-
-
         /// <summary>
         /// 不用await关键字，如何确认Task执行完毕了？
         /// </summary>
@@ -87,6 +85,9 @@ namespace MultiThread
                 return "Jesse";
             });
 
+            /*
+             * GetAwaiter方法会返回一个awaitable的对象（继承了INotifyCompletion.OnCompleted方法）我们只是传递了一个委托进去，等task完成了就会执行这个委托，但是并不会影响主线程，下面的代码会立即执行。这也是为什么我们结果里面第一句话会是 “主线程执行完毕”！
+             */
             task.GetAwaiter().OnCompleted(() =>
             {
                 // 2 秒之后才会执行这里
@@ -97,12 +98,9 @@ namespace MultiThread
             Console.WriteLine("Thread {0},主线程执行完毕", Thread.CurrentThread.ManagedThreadId);
         }
 
-        /*
-         * 
-         * 加上await关键字之后，后面的代码会被挂起等待，直到task执行完毕有返回值的时候才会继续向下执行，这一段时间主线程会处于挂起状态。
+        /* 加上await关键字之后，后面的代码会被挂起等待，直到task执行完毕有返回值的时候才会继续向下执行，这一段时间主线程会处于挂起状态。
          * GetAwaiter方法会返回一个awaitable的对象（继承了INotifyCompletion.OnCompleted方法）我们只是传递了一个委托进去，等task完成了就会执行这个委托，但是并不会影响主线程，下面的代码会立即执行。
          * 这也是为什么我们结果里面第一句话会是 “主线程执行完毕”！
-         * 
          */
 
         /// <summary>
